@@ -5,9 +5,10 @@ import NewsItem from "./NewsItem";
 const NewsBoard = ({category}) => {
 
     const [articles, setArticles]= useState([]);
-
+    // VITE_API_KEY=b9fce48c82b84fd88b57d4f26b680621
     useEffect(() => {
-        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+        // const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=b9fce48c82b84fd88b57d4f26b680621`;
         fetch(url)
             .then(response => response.json())
             .then(data => setArticles(data.articles))
