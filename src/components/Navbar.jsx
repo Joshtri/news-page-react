@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({setCategory}) => {
   return (
     <nav
       className="navbar navbar-expand-lg bg-body-tertiary"
@@ -27,23 +27,28 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                News
+              <a className="nav-link active" onClick={()=> setCategory("technology")}>
+                Technology
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
+              <a className="nav-link" onClick={()=>setCategory("business")}>
+                Business
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
+              <a className="nav-link" onClick={()=>setCategory("health")}>
+                Health
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
+              <a className="nav-link" onClick={()=>setCategory("sports")}>
+                Sports
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" onClick={()=>setCategory("entertainment")}>
+                Entertainment
               </a>
             </li>
           </ul>
